@@ -15,4 +15,17 @@
         <constructor-arg index="1" value="24"/>
         <constructor-arg index="2" value="bmw"/>
     </bean>
+
+    <!--测试如何配置集合属性-->
+    <bean id="person2" class="com.laowang.collections.Person">
+        <property name="name" value="Mike"/>
+        <property name="age" value="27"/>
+        <property name="cars">
+            <list>
+                <ref bean="car"/>
+                <ref bean="car2"/>
+                <ref bean="car3"/>
+            </list>
+        </property>
+    </bean>
 </beans>
