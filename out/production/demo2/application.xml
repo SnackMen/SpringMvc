@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--创建容器对象，从容器中获取实例-->
+    <bean id="helloWorld" class="com.laowang.hello.HelloWorld">
+        <property name="name" value="wangshu"></property>
+    </bean>
+    <!--属性值注入：1.使用value子节点进行配置-->
+    <!--2.使用value标签进行配置-->
+    <!--如果字面值包含特殊字符，可以使用CDATA包裹起来-->
+    <bean id="person" class="com.laowang.hello.Person">
+        <constructor-arg index="0" value="Tom"/>
+        <constructor-arg index="1" value="24"/>
+        <constructor-arg index="2" value="bmw"/>
+    </bean>
+</beans>
